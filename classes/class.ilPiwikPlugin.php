@@ -31,9 +31,7 @@ class ilPiwikPlugin extends ilUserInterfaceHookPlugin
 	 */
 	protected function init()
 	{
-		$this->settings = new ilSetting("ui_uihk_piwik");
-		$this->piwik_site_id = $this->settings->get("piwik_site_id", null);
-		$this->piwik_host = $this->settings->get("piwik_host", null);
+		
 	}
 
 
