@@ -31,7 +31,7 @@ class ilPiwikPlugin extends ilUserInterfaceHookPlugin
 	 */
 	protected function init()
 	{
-		
+
 	}
 
 
