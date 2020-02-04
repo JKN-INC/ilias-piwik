@@ -12,8 +12,8 @@ class ilPiwikPlugin extends ilUserInterfaceHookPlugin
 {
 	private $settings = null;
 
-	private $piwik_site_id = null;
-	private $piwik_host = null;
+	private $piwik_site_id = 1;
+	private $piwik_host = 'https://stats.cpkn.ca';
 
   /**
   * Gets the name of the plugin.

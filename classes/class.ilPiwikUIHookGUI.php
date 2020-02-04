@@ -42,10 +42,11 @@ class ilPiwikUIHookGUI extends ilUIHookPluginGUI
                 $html = $a_par['html'];
                 $index = strripos($html, "</head>", -7);
                 if ($index !== false)
-                {
+		        {
+		   
                     $tmpl = $this->plugin_object->getTemplate("tpl.piwik_tracking.html", true, true);
                     $tmpl->setVariable("PORTAL_NAME", CLIENT_NAME);
-
+		    
                     // insert code
                     $html = substr($html, 0, $index) . $tmpl->get() . substr($html, $index);
                     return array("mode" => ilUIHookPluginGUI::REPLACE, "html" => $html);
