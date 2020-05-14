@@ -12,8 +12,8 @@ class ilPiwikPlugin extends ilUserInterfaceHookPlugin
 {
 	private $settings = null;
 
-	private $piwik_site_id = null;
-	private $piwik_host = null;
+	private $piwik_site_id = 1;
+	private $piwik_host = 'https://stats.cpkn.ca';
 
   /**
   * Gets the name of the plugin.
@@ -54,7 +54,7 @@ class ilPiwikPlugin extends ilUserInterfaceHookPlugin
 	public function setPiwikSiteId($a_value)
 	{
 		$this->piwik_site_id = !empty($a_value) ? filter_var($a_value, FILTER_SANITIZE_NUMBER_INT) : null;
-		$this->settings->set('piwik_site_id', $this->piwik_site_id);
+		//$this->settings->set('piwik_site_id', $this->piwik_site_id);
 	}
 
 	/**
@@ -76,7 +76,7 @@ class ilPiwikPlugin extends ilUserInterfaceHookPlugin
 	{
     $this->piwik_host = !empty($a_value) ? filter_var($a_value, FILTER_SANITIZE_URL) : null;
 		$this->piwik_host = rtrim($this->piwik_host, '/');
-		$this->settings->set('piwik_host', $this->piwik_host);
+		//$this->settings->set('piwik_host', $this->piwik_host);
 	}
 
 	/**
