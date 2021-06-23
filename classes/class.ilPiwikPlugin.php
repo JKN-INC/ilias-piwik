@@ -15,15 +15,15 @@ class ilPiwikPlugin extends ilUserInterfaceHookPlugin
 	private $piwik_site_id = 1;
 	private $piwik_host = 'https://stats.cpkn.ca';
 
-  /**
-  * Gets the name of the plugin.
-  *
-  * @return string The name of the plugin.
-  */
-  function getPluginName()
-  {
-    return "Piwik";
-  }
+	/**
+	 * Gets the name of the plugin.
+	 *
+	 * @return string The name of the plugin.
+	 */
+	function getPluginName()
+	{
+		return "Piwik";
+	}
 
 	/**
 	 * Object initialization. Can be overwritten by plugin class
@@ -31,7 +31,6 @@ class ilPiwikPlugin extends ilUserInterfaceHookPlugin
 	 */
 	protected function init()
 	{
-
 	}
 
 
@@ -74,7 +73,7 @@ class ilPiwikPlugin extends ilUserInterfaceHookPlugin
 	 */
 	public function setPiwikHost($a_value)
 	{
-    $this->piwik_host = !empty($a_value) ? filter_var($a_value, FILTER_SANITIZE_URL) : null;
+		$this->piwik_host = !empty($a_value) ? filter_var($a_value, FILTER_SANITIZE_URL) : null;
 		$this->piwik_host = rtrim($this->piwik_host, '/');
 		//$this->settings->set('piwik_host', $this->piwik_host);
 	}

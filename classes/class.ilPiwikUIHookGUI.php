@@ -30,10 +30,10 @@ class ilPiwikUIHookGUI extends ilUIHookPluginGUI
 	 */
 	function getHTML($a_comp, $a_part, $a_par = array())
 	{
-		global $ilCtrl, $ilUser;
+		global $DIC;
 
 		// loading a template and this is NOT an async call?
-		if ($a_part == "template_load" && !$ilCtrl->isAsynch())
+		if ($a_part == "template_load" && !$DIC->ctrl()->isAsynch())
 		{
 			// is main template?
 			if (strtolower($a_par['tpl_id']) == "tpl.main.html")
